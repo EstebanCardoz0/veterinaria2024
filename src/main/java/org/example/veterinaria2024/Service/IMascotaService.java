@@ -1,5 +1,6 @@
 package org.example.veterinaria2024.Service;
 
+import org.example.veterinaria2024.dto.DTOmascota;
 import org.example.veterinaria2024.entity.Mascota;
 
 import java.util.List;
@@ -17,6 +18,8 @@ public interface IMascotaService {
     public void editMascota(Mascota masco);
 
     public List<Mascota> getPerroCaniche();
+
+    public DTOmascota mascoDTO(Long id);
 
 
 }
