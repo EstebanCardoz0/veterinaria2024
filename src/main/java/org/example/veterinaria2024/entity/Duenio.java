@@ -1,5 +1,6 @@
 package org.example.veterinaria2024.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,5 +21,6 @@ public class Duenio {
     private String celular;
 
     @OneToMany(mappedBy = "duenio")
+    @JsonManagedReference
     private List<Mascota> mascotas;
 }

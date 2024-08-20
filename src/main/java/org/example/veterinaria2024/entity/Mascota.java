@@ -1,5 +1,6 @@
 package org.example.veterinaria2024.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,6 +20,7 @@ public class Mascota {
     private String color;
 
     @ManyToOne @JoinColumn(name = "idDuenio")
+    @JsonBackReference
     private Duenio duenio;
 
 }
